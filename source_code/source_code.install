@@ -1,0 +1,27 @@
+<?php
+/**
+ * Implements hook_uninstall().
+ */
+function source_code_uninstall()
+{
+	node_type_delete('code');
+}
+
+/**
+ * Implements hook_field_schema().
+ */
+function source_code_field_schema($field)
+{
+	return array(
+		'columns' => array(
+			'proglang' => array(
+				'type'     => 'varchar',
+				'length'   => '32',
+				'not null' => true
+			)
+		),
+		'indexes' => array(
+			'proglang' => array('proglang')
+		)
+	);
+}

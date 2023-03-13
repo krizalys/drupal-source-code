@@ -1,0 +1,6 @@
+name = Source Code
+description = Provides source code management.
+core = 7.x
+configure = admin/config/content/source_code
+dependencies[] = libraries
+dependencies[] = options
